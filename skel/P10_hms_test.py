@@ -65,6 +65,6 @@ def test_mainprogram():
     output = subprocess.check_output(command, text=True).rstrip("\n")
     assert output == "02:02:13"
 
-pytest.main(["P10_hms_test.py", "-p", "no:faulthandler"])
+pytest.main(["P10_hms_test.py", "-p", "no:faulthandler", "-v"])
 
 

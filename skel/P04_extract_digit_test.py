@@ -16,4 +16,4 @@ def test_2():
 def test_3():    
     assert run_with_args("1300", "3") == "The 1000s digit of 1300 is 1"
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler"])
+pytest.main([basename + "_test.py", "-p", "no:faulthandler", "-v"])

@@ -24,4 +24,4 @@ def test_multiplication(num1, num2, expected):
     stdout, stderr, returncode = run_program(num1, num2)
     assert stdout == expected
 
-pytest.main(["P02_quiz2_test.py", "-p", "no:faulthandler"])
+pytest.main(["P02_quiz2_test.py", "-p", "no:faulthandler", "-v"])

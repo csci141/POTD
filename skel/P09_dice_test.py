@@ -40,6 +40,6 @@ def test_distribution():
     assert hist == pytest.approx(dict(zip(range(1, 9), [1.0]*8)), rel=0.2)
 
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler"])
+pytest.main([basename + "_test.py", "-p", "no:faulthandler"], "-v")
 
 

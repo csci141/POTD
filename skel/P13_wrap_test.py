@@ -36,5 +36,5 @@ the
 lazy
  dog"""
 
-pytest.main(["P13_wrap_test.py", "-vv", "-p", "no:faulthandler"])
+pytest.main(["P13_wrap_test.py", "-vv", "-p", "no:faulthandler", "-v"])
 
