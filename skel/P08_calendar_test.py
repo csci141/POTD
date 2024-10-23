@@ -4,9 +4,13 @@ import subprocess
 basename = "P08_calendar"
 
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
-
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    
 def remove_trailing_whitespace(output):
     """ Remove any trailing whitespace from the end of each line of output."""
     return '\n'.join([line.rstrip() for line in output.split('\n')])

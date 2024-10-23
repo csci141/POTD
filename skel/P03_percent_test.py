@@ -3,9 +3,14 @@ import subprocess
 
 basename = "P03_percent"
 
+
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_1():
     assert run_with_args("900", "50") == "50.0 percent of 900.0 is 450.0"

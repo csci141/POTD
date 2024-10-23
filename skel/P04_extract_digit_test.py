@@ -3,9 +3,14 @@ import subprocess
 
 basename = "P04_extract_digit"
 
+
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_1():
     assert run_with_args("1531", "2") == "The 100s digit of 1531 is 5"

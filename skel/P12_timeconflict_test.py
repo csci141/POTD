@@ -27,9 +27,14 @@ def test_conflicts():
     assert conflicts((8, 0, 0), (17, 0, 0), (7, 59, 59)) == False
     assert conflicts((8, 0, 0), (17, 0, 0), (17, 0, 1)) == False
 
+
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_main_program():
     assert run_with_args("10", "0", "0", "11", "0", "0", "10", "30", "0") == \

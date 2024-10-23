@@ -3,9 +3,14 @@ import subprocess
 
 basename = "P05_xor"
 
+
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_TT():
     assert run_with_args("T", "T") == "False"

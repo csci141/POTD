@@ -4,9 +4,14 @@ import subprocess
 
 basename = "P06_time_convert"
 
+
 def run_with_args(*args):
-    command = ["python3", basename + ".py", *args]
-    return subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+        command = ["python3", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
+    except:
+        command = ["python", basename + ".py", *args]
+        return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_8am():
     assert run_with_args("8", "00", "AM") == "08:00"
