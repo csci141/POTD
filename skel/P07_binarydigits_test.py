@@ -27,5 +27,9 @@ def test_16384():
     # 16,384 in binary is 100000000000000
     assert run_with_args("16384") == "15"
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler", "-v"])
+def test_0():
+    #0 in binary is 0
+    assert run_with_args("0") == "1"
+
+pytest.main([basename + "_test.py", "-p", "no:faulthandler"])
 
