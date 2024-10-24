@@ -1,3 +1,4 @@
+# POTD 11 skel
 import sys
 
 import P10_hms

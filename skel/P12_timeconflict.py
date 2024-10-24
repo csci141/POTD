@@ -1,3 +1,4 @@
+# POTD 12 skel
 import sys
 
 def to_seconds(hms_tuple):
