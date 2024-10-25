@@ -54,16 +54,28 @@ def test_padprint(capsys):
     assert captured.out == "124"
 
 def test_mainguard(capsys):
-    command = ["python3", "-c", "import P10_hms"]
+    
+    command = ["python", "-c", "import P10_hms"]
     message = "importing P10_hms should not print any output or cause an error; check your main guard"
     try:
         assert subprocess.check_output(command, text=True) == "", message
     except subprocess.CalledProcessError:
         assert False, message
+    except FileNotFoundError:
+        command = ["python3", "-c", "import P10_hms"]
+        try:
+            assert subprocess.check_output(command, text=True) == "", message
+        except subprocess.CalledProcessError:
+            assert False, message
 
 def test_mainprogram():
-    command = ["python3", "P10_hms.py", "7333"]
-    output = subprocess.check_output(command, text=True).rstrip("\n")
+    try:
+      command = ["python3", "P10_hms.py", "7333"]
+      output = subprocess.check_output(command, text=True).rstrip("\n")
+    except Exception:
+      command = ["python", "P10_hms.py", "7333"]
+      output = subprocess.check_output(command, text=True).rstrip("\n")
+    
     assert output == "02:02:13"
 
 pytest.main(["P10_hms_test.py", "-p", "no:faulthandler", "-v"])
