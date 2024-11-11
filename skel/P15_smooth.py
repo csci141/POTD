@@ -29,7 +29,7 @@ def print_rounded(nums, end="\n"):
     print("[", end="")
     for i in range(len(nums)-1):
         print(f"{nums[i]:3.2f}", end=", ")
-    print(f"{nums[i]:3.2f}]", end=end)
+    print(f"{nums[-1]:3.2f}]", end=end)
 
 if __name__ == "__main__":
     pass # (this is a placeholder so the skeleton doesn't crash; delete it)
