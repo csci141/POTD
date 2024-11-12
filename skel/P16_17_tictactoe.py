@@ -1,4 +1,4 @@
-# POTD 16 skel
+# POTD 16 and 17 skel
 import sys
 
 def state_from_file(filename):
