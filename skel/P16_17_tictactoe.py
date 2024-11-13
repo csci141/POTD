@@ -25,7 +25,7 @@ def get_col(state, i):
 def get_diag(state, i):
     """ Return a length-3 list containing the ith diagonal of the game state.
     There are two diagonals:
-      diagonal 0 is the one going from the top-left to tthe bottom-right
+      diagonal 0 is the one going from the top-left to the bottom-right
       diagonal 1 is the one going from the bottom-left to the top-right. """
 
    
