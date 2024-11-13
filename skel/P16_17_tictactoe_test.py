@@ -71,7 +71,7 @@ def test_analyze(test_games, test_game_index):
 @pytest.mark.parametrize("test_game_index", range(N_TEST_GAMES))
 def test_state_from_file(input_files, test_games, test_game_index):
     test_file = input_files[test_game_index]
-     = state_from_file(str(test_file))
+    result_state = state_from_file(str(test_file))
     assert result_state == test_games[test_game_index]["state"]
     
 
