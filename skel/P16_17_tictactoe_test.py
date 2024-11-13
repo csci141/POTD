@@ -2,13 +2,13 @@
 import pytest
 import pickle
 
-from P16_tictactoe import *
+from P16_17_tictactoe import *
 
 N_TEST_GAMES = 7
 
 @pytest.fixture(scope="module")
 def test_games():
-    with open("P16_test_data.pkl", "rb") as f:
+    with open("P16_17_test_data.pkl", "rb") as f:
         return pickle.loads(f.read())
 
 @pytest.fixture(scope="module")
@@ -75,4 +75,4 @@ def test_state_from_file(input_files, test_games, test_game_index):
     assert result_state == test_games[test_game_index]["state"]
     
 
-pytest.main(["P16_tictactoe_test.py", "-p", "no:faulthandler"])
+pytest.main(["P16_17_tictactoe_test.py", "-p", "no:faulthandler"])
