@@ -37,7 +37,7 @@ def state_str(state):
 def count_moves(state):
     """ Count the number of moves by either player that have been made so far
     in the game. For example, in the game state
-        [' ', ' ', ' ', 'x', ' ', 'o', ' ', 'x'],
+        [' ', ' ', ' ', 'x', ' ', 'o', ' ', 'x', ' '],
     3 moves have been made. """
 
 def analyze(state):
