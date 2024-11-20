@@ -63,7 +63,7 @@ def test_factors_are_valid():
 
 def test_specific_numbers(n, m, expected):
     """Test specific number combinations"""
-    result = get_factors(n)
-    assert result[m] == expected
+    result = get_factors(n,m)
+    assert result == expected
 
-pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler"])
+pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler", "-v", "-s"])
