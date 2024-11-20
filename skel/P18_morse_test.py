@@ -132,4 +132,4 @@ def test_edge_cases(morse_dict):
     assert translate_rev(reverse_dict, '.- ? -...') == 'A?B'
     assert translate_rev(reverse_dict, '.- ? --.--') == 'A??'
 
-pytest.main(["P18_morse_test.py", "-p", "no:faulthandler"])
+pytest.main(["P18_morse_test.py", "-p", "no:faulthandler", "-v", "-s"])
