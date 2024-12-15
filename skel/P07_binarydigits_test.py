@@ -37,5 +37,5 @@ def test_0():
     #0 in binary is 0
     assert run_with_args("0") == "1"
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler"])
+pytest.main([basename + "_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
 

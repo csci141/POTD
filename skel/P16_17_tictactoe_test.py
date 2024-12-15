@@ -75,4 +75,4 @@ def test_state_from_file(input_files, test_games, test_game_index):
     assert result_state == test_games[test_game_index]["state"]
     
 
-pytest.main(["P16_17_tictactoe_test.py", "-p", "no:faulthandler"])
+pytest.main(["P16_17_tictactoe_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])

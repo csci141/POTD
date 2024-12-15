@@ -17,4 +17,4 @@ def test_quiz1():
     stdout, stderr = process.communicate(input="\n")
     assert "What is" in stdout
 
-pytest.main(["P01_quiz1_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main(["P01_quiz1_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])

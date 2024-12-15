@@ -23,6 +23,6 @@ def test_timediff():
     assert timediff(1, 30, 0, 2, 30, 0) == 3600
     assert timediff(10, 30, 0, 11, 45, 30) == 4530
 
-pytest.main(["P11_timediff_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main(["P11_timediff_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
 
 

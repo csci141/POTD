@@ -78,6 +78,6 @@ def test_mainprogram():
     
     assert output == "02:02:13"
 
-pytest.main(["P10_hms_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main(["P10_hms_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])
 
 

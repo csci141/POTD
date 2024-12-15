@@ -28,4 +28,4 @@ def test_nonalpha():
 def test_circular():
     assert rotate(6, rotate(20, "SECRET PASSWORD")) == "SECRET PASSWORD"
 
-pytest.main(["P14_rotcipher_test.py", "-p", "no:faulthandler"])
+pytest.main(["P14_rotcipher_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])

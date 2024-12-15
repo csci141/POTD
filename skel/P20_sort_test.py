@@ -50,5 +50,5 @@ def test_sort(test_lists):
                 assert lst[:start] == fresh_lst[:start], "list changed outside sort range"
                 assert lst[end:] == fresh_lst[end:], "list changed outside sort range"
 
-pytest.main(["P20_sort_test.py", "-v", "-p", "no:faulthandler"])
+pytest.main(["P20_sort_test.py",   "-vv", "--showlocals", "-p", "no:faulthandler"])
 

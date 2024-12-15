@@ -23,4 +23,4 @@ def test_3():
     assert run_with_args("120.0", "70") == "70.0 percent of 120.0 is 84.0"
 
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler"], "-v")
+pytest.main([basename + "_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])

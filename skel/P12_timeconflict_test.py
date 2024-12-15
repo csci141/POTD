@@ -44,4 +44,4 @@ def test_main_program():
     assert run_with_args("10", "0", "0", "11", "0", "0", "12", "0", "0") == \
         "(12, 0, 0) does not conflict with the interval from (10, 0, 0) to (11, 0, 0)"
     
-pytest.main([basename + "_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main([basename + "_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])

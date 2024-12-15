@@ -54,5 +54,5 @@ def test_31_4():
 25 26 27 28 29 30 31"""
 
 
-pytest.main([basename + "_test.py", "-vv", "-p", "no:faulthandler", "-v"])
+pytest.main([basename + "_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
 

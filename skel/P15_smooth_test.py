@@ -61,4 +61,4 @@ def test_nomodify(): # make sure neither function modifies its input list
         smoothed = smooth(nums_in)
         assert nums_in == orig, "smooth and should not modify its input"
 
-pytest.main(["P15_smooth_test.py", "-p", "no:faulthandler"])
+pytest.main(["P15_smooth_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])

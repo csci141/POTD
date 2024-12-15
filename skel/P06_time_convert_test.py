@@ -34,5 +34,5 @@ def test_noon():
 def test_midnight():    
     assert run_with_args("12", "00", "AM") == "00:00"
     
-pytest.main([basename + "_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main([basename + "_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
 

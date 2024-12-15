@@ -26,4 +26,4 @@ def test_FF():
     assert run_with_args("F", "F") == "False"
 
 
-pytest.main([basename + "_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main([basename + "_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
