@@ -10,7 +10,8 @@ def isort(numbers, start, end):
 
 def swap(lst, i1, i2):
     """ Swap the values in the list `lst` at indices i1 and i2. Operates
-    in-place and returns nothing. Preconditions: 0 <= i1, i2, < len(lst) """
+    in-place and returns nothing. All indices other than i1 and i2 are left unchanged. 
+    Preconditions: 0 <= i1, i2, < len(lst) """
 
     
 def min_index(numbers, start, end):
