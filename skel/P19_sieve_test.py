@@ -66,4 +66,4 @@ def test_specific_numbers(n, m, expected):
     result = get_factors(n)
     assert result[m] == expected
 
-pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler", "-v"])
+pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler", "-vv", "-s", "--showlocals"])
