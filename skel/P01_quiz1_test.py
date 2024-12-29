@@ -14,7 +14,11 @@ def test_quiz1():
         stderr=subprocess.PIPE,
         text=True
     )
+
+    #When prompted for input, enter newline
     stdout, stderr = process.communicate(input="\n")
+
+    #verify that the input prompt had 'What if' in the text string (capitalization and spacing matters!).
     assert "What is" in stdout
 
 pytest.main(["P01_quiz1_test.py",  "-vv", "--showlocals", "-p", "no:faulthandler"])
