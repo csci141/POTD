@@ -1,4 +1,7 @@
 # POTD 16 and 17 skel
+# Author:
+# Date:
+# Description:
 import sys
 
 def state_from_file(filename):

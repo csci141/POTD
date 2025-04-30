@@ -1,4 +1,7 @@
 # POTD 14 skel
+# Author:
+# Date:
+# Description:
 import sys
  
 def rotate(offset, in_str):

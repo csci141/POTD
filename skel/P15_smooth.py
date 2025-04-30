@@ -1,4 +1,7 @@
 # POTD 15 skel
+# Author:
+# Date:
+# Description:
 import sys
 
 def mean(nums):
