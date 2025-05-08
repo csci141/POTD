@@ -1,4 +1,4 @@
-# POTD 12 skel
+# POTD 12 tests
 import pytest
 import subprocess
 from P12_timeconflict import to_seconds, to_hms, conflicts
