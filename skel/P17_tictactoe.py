@@ -1,4 +1,4 @@
-# POTD 16 and 17 skel
+# POTD 17 skel
 # Author:
 # Date:
 # Description:
