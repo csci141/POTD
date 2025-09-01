@@ -1,26 +1,27 @@
-# POTD 3 test
-import pytest
-import subprocess
+#!/usr/bin/env python3
 
-basename = "P03_percent"
+try:
+    from iotest import run_assignment_tests
+except ImportError:
+    print("❌ Error: Could not find the 'iotest' module.")
+    print("Please make sure 'iotest.py' is in the same directory as this test file and your solution program.")
+    print("You can download 'iotest.py' from the github repository where POTD skeletons and test programs are found.")
+    exit(1)
 
+test_cases = [
+    {
+        "args": ["900", "50"],
+        "expected_output": "50.0 percent of 900.0 is 450.0"
+    },
+    {
+        "args": ["900.0", "50.0"],
+        "expected_output": "50.0 percent of 900.0 is 450.0"
+    },
+    {
+        "args": ["120.0", "70"],
+        "expected_output": "70.0 percent of 120.0 is 84.0"
+    }
+]
 
-def run_with_args(*args):
-    try:
-        command = ["python3", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
-    except:
-        command = ["python", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
-
-def test_1():
-    assert run_with_args("900", "50") == "50.0 percent of 900.0 is 450.0"
-    
-def test_2():    
-    assert run_with_args("900.0", "50.0") == "50.0 percent of 900.0 is 450.0"
-    
-def test_3():    
-    assert run_with_args("120.0", "70") == "70.0 percent of 120.0 is 84.0"
-
-
-pytest.main([basename + "_test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])
+if __name__ == "__main__":
+    run_assignment_tests("P03_percent.py", test_cases)

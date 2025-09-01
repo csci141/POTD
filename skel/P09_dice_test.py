@@ -1,17 +1,13 @@
 # POTD 9 test
 import pytest
 import subprocess
+import sys
 
 basename = "P09_dice"
 
-
 def run_with_args(*args):
-    try:
-        command = ["python3", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
-    except:
-        command = ["python", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
+    command = [sys.executable, basename + ".py", *args]
+    return subprocess.check_output(command, text=True).rstrip("\n")
 
 def parse_output(output):
     """ Returns a 2-tuple with a list of ints and a float
