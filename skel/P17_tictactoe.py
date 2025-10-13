@@ -47,7 +47,7 @@ def analyze(state):
     """ Analyze the game state to determine which player (if any) has won, and
     where. Assume that the state represents a valid game state. This means at
     most one player has won. If no player has won, return None. If a player
-    has won, return a length-3 tuple containing:
+    has won, return a length-3 list containing:
         - the winning player ("x" or "o", as a string)
         - the winning direction ("row", "column", or "diagonal")
         - the winning location (0, 1, or 2, defined as in the get_* functions.
