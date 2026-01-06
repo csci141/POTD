@@ -1,4 +1,7 @@
 # POTD 11 skel
+# Author:
+# Date:
+# Description:
 import sys
 
 import P10_hms

@@ -1,4 +1,7 @@
 # POTD 12 skel
+# Author:
+# Date:
+# Description:
 import sys
 
 def to_seconds(hms_tuple):

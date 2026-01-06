@@ -1,6 +1,7 @@
-# POTD 12 skel
+# POTD 12 tests
 import pytest
 import subprocess
+import sys
 from P12_timeconflict import to_seconds, to_hms, conflicts
 
 basename = "P12_timeconflict"
@@ -30,12 +31,8 @@ def test_conflicts():
 
 
 def run_with_args(*args):
-    try:
-        command = ["python3", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
-    except:
-        command = ["python", basename + ".py", *args]
-        return subprocess.check_output(command, text=True).rstrip("\n")
+    command = [sys.executable, basename + ".py", *args]
+    return subprocess.check_output(command, text=True).rstrip("\n")
 
 def test_main_program():
     assert run_with_args("10", "0", "0", "11", "0", "0", "10", "30", "0") == \

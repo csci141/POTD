@@ -1,4 +1,7 @@
 # POTD 20 skel
+# Author:
+# Date:
+# Description:
 
 import sys
 

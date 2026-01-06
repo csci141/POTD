@@ -1,4 +1,7 @@
 # POTD 18 skel
+# Author:
+# Date:
+# Description:
 import sys
 
 def get_dictionary(code_file):
