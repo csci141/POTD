@@ -27,8 +27,23 @@ def decode_rle(rle_file, output_file):
 # above functions, but these are not directly tested by the test program.
 
 def encode_line(line):
-    """ Run-length encode a single line of text. """
+     """ Run-length encode a single line of text. 
+    The encoding replaces each maximal sequence of consecutive identical
+    characters with the length of the sequence followed by the character.
+    For example:
+        "aaabbc" -> "3a2b1c"
+    Precondition: line does not contain newline characters."""
 
 def decode_line(line):
-    """ Run-length decode a single line of text. """
+    """ Run-length decode a single line of text. 
+    The encoded format consists of one or more pairs:
+        <count><character>
+    where <count> is one or more digits representing how many times
+    the following character should appear.
+
+    For example:
+        "3a2b1c" -> "aaabbc"
+        "12x"    -> "xxxxxxxxxxxx"
+    
+    Precondition: line is correctly formatted according to encode_line."""
 
