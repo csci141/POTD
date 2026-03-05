@@ -67,3 +67,6 @@ def test_specific_numbers(n, m, expected):
     assert result[m] == expected
 
 pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler", "-vv", "-s", "--showlocals"])
+#to prevent it from running forever if you have an infinite loop, you can set it to time out.
+#You'll need to install pytest timeout : see https://pypi.org/project/pytest-timeout/
+#pytest.main(["P19_sieve_test.py", "-p", "no:faulthandler", "-vv", "-s", "--showlocals", "--timeout", "120"])
