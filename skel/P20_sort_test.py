@@ -9,8 +9,8 @@ def test_lists():
         [1, 2, 3, 4, 5],
         [5, 4, 3, 2, 1],
         [4],
-        [3, 1],
-        [4, 3, 6, -4, 10, -6, 3, -4],
+        [3, 1, 3],
+        [4, 3, 6, -4, 10, -6, 3],
         [-7, -7, -2, 7, 9, -9, -7, -1, 8, 8, -1, 4, -9, -5, -8, -4,
          10, -4, 5, -10, 5, 2, 4, 9, 3, -6, -6, 7, -6, 9, 4, 10, 5,
          -8, 1, 6, -1, 1, -3, 6, 3, -10, -1, 4, 2, -6, -5, -8, -3, 6]
@@ -24,7 +24,11 @@ def test_min_index(test_lists):
             for end in range(start+1, len(lst)):
                 mi = min_index(lst, start, end)
                 assert lst == fresh_lst, "min_index should not change its input list"
-                assert lst[mi] == min(lst[start:end])
+                #check that the index identified as minimum is the correct index
+                assert mi == lst[start:end].index(min(lst[start:end]))
+                
+                #this one just verifies you found the value of the smallest number, not the index of the smallest number
+                #assert lst[mi] == min(lst[start:end])
                 
 def test_swap(test_lists):
     swap_lists = copy.deepcopy(test_lists[:5])
@@ -51,4 +55,5 @@ def test_sort(test_lists):
                 assert lst[end:] == fresh_lst[end:], "list changed outside sort range"
 
 pytest.main(["P20_sort_test.py",   "-vv", "--showlocals", "-p", "no:faulthandler"])
+
 
