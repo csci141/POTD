@@ -7,7 +7,7 @@ import sys
 def get_dictionary(code_file):
     """ Generate a morse code dictionary from code_file. Each line of the file
     contains a single character, a space, then a sequence of . and - characters
-    comprising the code for that character. The returned dicationary maps each
+    comprising the code for that character. The returned dictionary maps each
     character to its code. As a special case, not included in the input file,
     the space character (" ") should map to the empty string ("").
     Parameters: code_file is the name of a file in the current directory with the morse code mappings for upper case letters
