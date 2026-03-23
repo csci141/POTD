@@ -24,8 +24,15 @@ def test_min_index(test_lists):
             for end in range(start+1, len(lst)):
                 mi = min_index(lst, start, end)
                 assert lst == fresh_lst, "min_index should not change its input list"
+                
+                #this is the smallest value in that list
+                minval = min(lst[start:end])
+                
+                #the index of the smalles value in the sub list plus the start val is the index in the whole list
+                index_of_min_val_in_sublist = lst[start:end].index(minval) + start
+                
                 #check that the index identified as minimum is the correct index
-                assert mi == lst[start:end].index(min(lst[start:end]))
+                assert mi == index_of_min_val_in_sublist
                 
                 #this one just verifies you found the value of the smallest number, not the index of the smallest number
                 #assert lst[mi] == min(lst[start:end])
@@ -55,5 +62,4 @@ def test_sort(test_lists):
                 assert lst[end:] == fresh_lst[end:], "list changed outside sort range"
 
 pytest.main(["P20_sort_test.py",   "-vv", "--showlocals", "-p", "no:faulthandler"])
-
 
